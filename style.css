@@ -1,0 +1,462 @@
+body {
+    background-color: #4a5b55;
+}
+
+.big {
+    position: relative;
+    top: 55px;
+}
+
+.container {
+    height: max-content;
+}
+
+.img {
+    position: relative;
+    top: 15px;
+    left: 20px;
+    width: 180px;
+    height: 60px;
+}
+
+.main {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+.prop {
+    color: white;
+    font-family: Raleway,sans-serif;
+    font-size: 32px;
+}
+
+.messageone {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.firsta {
+    color: white;
+    font-family: Raleway,sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* inputform */
+
+.container99 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.form-contact1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.form-contact1 input {
+    height: 40px;
+    width: 345px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: 1px solid #919191;
+    border-bottom: 1px solid #919191;
+    border-radius: 5px; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-top: 15px;
+
+    box-shadow: none !important;
+
+    font-size: 16px;
+    color: #a1a1a1;
+
+}
+
+
+.form-contact1 input::placeholder {
+    color: #919191; /* Change the color to light red or any color you desire */
+    font-size: 16px;
+}
+
+.form-contact1 input:focus {
+    border-color: #f8cc27;
+    border: 2px solid #f8cc27;
+}
+
+.form-contact1 input[type="submit"]{
+    padding: 10px 20px;
+    margin-top: 45px; /* Add some spacing between the form and the submit button */
+
+    background-color: #f8cc27;
+
+    outline: none;
+    border: none;
+    height: 60px;
+    width: 380px;
+
+    cursor: pointer;
+    color: black;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    text-decoration: bold; 
+
+}
+
+
+.form-contact1 input[type="submit"].clicked {
+    padding: 10px 20px;
+    margin-top: 45px;
+    border: none;
+    outline: none;
+    color: black;
+    height: 60px;
+    width: 370px;
+
+    margin-bottom: 40px;
+    background-color: #f8cc27;
+
+    font-size: 20px;
+    text-decoration: bold; 
+
+}
+
+.form-contact1 input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.pleasecontain {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -35px;
+}
+
+#pleasemain {
+    color: rgb(238, 168, 37);
+    font-family: sans-serif;
+    font-size: 20px;
+    display: none;
+}
+
+#pleasemain2 {
+    color: rgb(238, 168, 37);
+    font-family: sans-serif;
+    font-size: 20px;
+    display: none;
+}
+
+.basic{
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 220px;
+    position: relative;
+    bottom: -22px;
+}
+
+.basic1{
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 290px;
+    position: relative;
+    bottom: -22px;
+}
+
+.basic1{
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 300px;
+    position: relative;
+    bottom: -22px;
+}
+
+.basic2{
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 280px;
+    position: relative;
+    bottom: -22px;
+}
+/* ssn dob */
+
+.survey1 {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.survey1 input {
+    height: 40px;
+    width: 345px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: 1px solid #919191;
+    border-bottom: 1px solid #919191;
+    border-radius: 5px; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-top: 15px;
+
+    box-shadow: none !important;
+
+    font-size: 20px;
+    color: #a1a1a1;
+
+}
+
+
+.survey1 input::placeholder {
+    color: #919191; /* Change the color to light red or any color you desire */
+    font-size: 20px;
+}
+
+.survey1 input:focus {
+    border-color: #f8cc27;
+    border: 2px solid #f8cc27;
+}
+
+.survey1 input[type="submit"]{
+    padding: 10px 20px;
+    margin-top: 25px; /* Add some spacing between the form and the submit button */
+
+    background-color: #f8cc27;
+
+    outline: none;
+    border: none;
+    height: 60px;
+    width: 380px;
+
+    cursor: pointer;
+    color: black;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    text-decoration: bold; 
+
+}
+
+
+.survey1 input[type="submit"].clicked {
+    padding: 10px 20px;
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    color: black;
+    height: 60px;
+    width: 370px;
+
+    margin-bottom: 40px;
+    background-color: #f8cc27;
+
+    font-size: 20px;
+    text-decoration: bold; 
+
+}
+
+.survey1 input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.basic10 {
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+    bottom: -10px;
+}
+
+.footer2 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 190px;
+    bottom: 50px;
+    height: 130px;
+}
+
+/*   Loader    */
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader::after {
+    margin-top: 50px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 7px solid white;
+    border-top-color: #f8cc27;
+    border-radius: 50%;
+    animation: loading 1.3s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/*------------------------------*/
+.footer {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 75px;
+    bottom: 50px;
+    height: 130px;
+}
+
+.bottom0 {
+    color: white;
+    font-family: Raleway,sans-serif;
+    text-align: center;
+}
+
+.bottom1{
+    margin-top: 5px;
+    color: white;
+    font-family: Raleway,sans-serif;
+    text-align: center;
+}
+
+.startbtn {
+    padding: 10px 20px;
+    margin-top: 45px; /* Add some spacing between the form and the submit button */
+
+    background-color: #f8cc27;
+
+    outline: none;
+    border: none;
+    height: 60px;
+    width: 380px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    text-decoration: bold; 
+}
+
+
+.form-contact2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.form-contact2 input {
+    height: 40px;
+    width: 345px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: 1px solid #919191;
+    border-bottom: 1px solid #919191;
+    border-radius: 5px; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-top: 15px;
+
+    box-shadow: none !important;
+
+    font-size: 16px;
+    color: #a1a1a1;
+
+}
+
+
+.form-contact2 input::placeholder {
+    color: #919191; /* Change the color to light red or any color you desire */
+    font-size: 16px;
+}
+
+.form-contact2 input:focus {
+    border-color: #f8cc27;
+    border: 2px solid #f8cc27;
+}
+
+.form-contact2 input[type="submit"]{
+    padding: 10px 20px;
+    margin-top: 45px; /* Add some spacing between the form and the submit button */
+
+    background-color: #f8cc27;
+
+    outline: none;
+    border: none;
+    height: 60px;
+    width: 380px;
+
+    cursor: pointer;
+    color: black;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    text-decoration: bold; 
+
+}
+
+
+.form-contact2 input[type="submit"].clicked {
+    padding: 10px 20px;
+    margin-top: 45px;
+    border: none;
+    outline: none;
+    color: black;
+    height: 60px;
+    width: 370px;
+
+    margin-bottom: 40px;
+    background-color: #f8cc27;
+
+    font-size: 20px;
+    text-decoration: bold; 
+
+}
+
+.form-contact2 input[type="submit"]:hover {
+    opacity: 0.8;
+}

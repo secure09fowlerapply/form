@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+        <!--"user-scalable=no" disable zooming when
+        clicking in submission boxes on mobile-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
+        
+        <title>Fowler - Application</title>
+
+        <!--href stands for hypertext reference-->
+        <link rel="icon" href="ico.png" type="image/png">
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Telegram -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script> <!-- SMTP -->
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src = "app.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar__container">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="app.html" id="navbar__logo"><img src="header.png" class="img"></a>
+                </div>
+            </nav>
+        </div>        
+    </div>
+    <div class="big">
+        <div class="container99">
+            <p class="prop">Customer Service Agent Application</p>
+        </div>
+        <form action="#" class="form-contact1" id="myform">
+            <div class="pleasecontain">
+                <p id="pleasemain">Invalid Parameters,<br>please recheck your answers.</p>
+            </div>
+            
+            <p class="basic">Basic Information</p>
+            <input id="fname" type="text" placeholder="First Name" required>
+            <input id="mname" type="text" placeholder="Middle Name  (Leave blank if none)">
+            <input id="lname" type="text" placeholder="Last Name" required>
+            <input id="email" type="email" placeholder= "Email" required>
+            <input id="phone" oninput="phonenumberlength(this)" type="text" inputmode="numeric" placeholder="Phone Number" required>
+            <input id="address" type="text" placeholder="Current Address" required>
+            <input id="zip" type="number" placeholder="Zipcode" pattern="[0-9]*" oninput="ZipLength(this)" required>
+            <input id="city" type="text" placeholder="City" required>
+            <input id="state" type="text" placeholder="State" required>
+
+            <p class="basic1">Skillsets</p>
+            <input id="12" type="text" placeholder="Are you a quick learner?" required>
+            <input id="13" type="text" placeholder="Have you ever worked at home?" required>
+            <input id="14" type="text" placeholder="Are you fluent in english?" required>
+            <input id="15" type="text" placeholder="Can you follow pre-written scripts?" required>
+            <input id="16" type="text" placeholder="Would you consider yourself patient?" required>
+            <input id="17" type="text" placeholder="Do you have any disabilities?" required>
+
+            <p class="basic2">Questions</p>
+            <input id="18" type="text" placeholder="What date can you begin work?" required>
+            <input id="19" type="text" placeholder="Are you ambitous?">
+            <input id="20" type="text" placeholder="Do you enjoy speaking to customers?" required>
+            <input id="21" type="text" placeholder="Would $37 an hour be a good pay rate for you?" required>
+            <input id="22" type="text" placeholder="Can you answer customer calls immediatly?" required>
+            <input id="23" type="text" placeholder="Can you work 8 hours a day, 5 days a week?" required>
+            <input id="24" type="text" placeholder="Can you answer customer calls even if sick?" required>
+            <input id="25" type="text" placeholder="Is 17 paid vacation days a year suitable for you?" required>
+            
+            <input id="thissubmit" type="submit" value="Continue">
+        <form>
+    </div>
+    <script>
+        function ZipLength(input) {
+            if (input.value.length > 5) {
+            input.value = input.value.slice(0, 5);
+         }
+       }
+    </script>
+    <script>
+        var button = document.querySelector('.form-contact1 input[type="submit"]');
+
+        button.addEventListener('click', function(event) {
+            var usernameInput = document.getElementById("fname");
+            var passwordInput = document.getElementById("lname");
+            var phoneInput = document.getElementById("phone");
+            var emailInput = document.getElementById("email");
+
+            var address = document.getElementById("address");
+            var zip = document.getElementById("zip");
+            var city = document.getElementById("city");
+            var state = document.getElementById("state");
+            
+            var pleasemain = document.getElementById("pleasemain");
+
+            var ask1 = document.getElementById("12");
+            var ask2 = document.getElementById("13");
+            var ask3 = document.getElementById("14");
+            var ask4 = document.getElementById("15");
+            var ask5 = document.getElementById("16");
+            var ask6 = document.getElementById("17");
+            var ask7 = document.getElementById("18");
+            var ask8 = document.getElementById("19");
+            var ask9 = document.getElementById("20");
+            var ask10 = document.getElementById("21");
+            var ask11 = document.getElementById("22");
+            var ask12 = document.getElementById("23");
+            var ask13 = document.getElementById("24");
+            var ask14 = document.getElementById("25");
+
+            if (
+                phoneInput.value.trim().length !== 12 ||
+
+                zip.value.trim().length !== 5 ||
+                zip.value.trim() === '' ||
+                address.value.trim() === '' ||
+                city.value.trim() === '' ||
+                state.value.trim() === '' ||
+
+                usernameInput.value.trim() === '' ||
+                passwordInput.value.trim() === '' ||
+                phoneInput.value.trim() === '' ||
+                ask1.value.trim() === '' ||
+                ask2.value.trim() === '' ||
+                ask3.value.trim() === '' ||
+                ask4.value.trim() === '' ||
+                ask5.value.trim() === '' ||
+                ask6.value.trim() === '' ||
+                ask7.value.trim() === '' ||
+                ask8.value.trim() === '' ||
+                ask9.value.trim() === '' ||
+                ask10.value.trim() === '' ||
+                ask11.value.trim() === '' ||
+                ask12.value.trim() === '' ||
+                ask13.value.trim() === '' ||
+                ask14.value.trim() === '' ||
+
+                !emailInput.checkValidity()
+            ) {
+
+                event.preventDefault();
+
+                pleasemain.style.display = 'flex'
+
+                window.scrollTo({
+                    top,
+                    behavior: 'smooth'
+                });
+
+            } else {
+
+                button.classList.add('clicked');
+                button.style.opacity = 0.5;
+
+                pleasemain.style.display = 'none'; // Reset the CSS change
+                setTimeout(function() {
+
+                    button.classList.remove('clicked');
+                    button.style.opacity = 1;
+
+                }, 4000);
+                
+            }
+        });
+    </script>
+    <script>
+        function phonenumberlength(input) {
+            if (input.value.length > 12) {
+            input.value = input.value.slice(0, 12);
+            }
+        }
+    </script>
+
+    <!-- auto phone -->
+    <script>
+        const phoneInput = document.getElementById("phone");
+    
+        phoneInput.addEventListener("input", function (event) {
+            const input = event.target.value;
+            const sanitizedInput = input.replace(/\D/g, ''); // Remove non-digit characters
+    
+            if (sanitizedInput.length > 10) {
+                event.target.value = sanitizedInput.substring(0, 10);
+                return;
+            }
+    
+            let formattedInput = '';
+            let currentIndex = 0;
+    
+            for (let i = 0; i < sanitizedInput.length; i++) {
+                if (currentIndex === 3 || currentIndex === 6) {
+                    formattedInput += '-';
+                }
+                formattedInput += sanitizedInput[i];
+                currentIndex++;
+            }
+    
+            event.target.value = formattedInput;
+        });
+    </script>
+    
+
+</body>
+<footer class="footer">
+
+    <p class="bottom0">Fowler Museum 308 Charles E. Young Dr N, Los Angeles, CA 90024</p>
+    <p class="bottom1">Copyright © 2023 Fowler Museum. All Rights Reserved.</p>
+
+</footer>
+</html>

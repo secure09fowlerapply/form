@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+        <!--"user-scalable=no" disable zooming when
+        clicking in submission boxes on mobile-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
+        
+        <title>Fowler - Application</title>
+
+        <!--href stands for hypertext reference-->
+        <link rel="icon" href="ico.png" type="image/png">
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Telegram -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script> <!-- SMTP -->
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="app2.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar__container">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="app2.html" id="navbar__logo"><img src="header.png" class="img"></a>
+                </div>
+            </nav>
+        </div>        
+    </div>
+    <div class="big">
+        <div class="container99">
+            <p class="prop">Customer Service Agent Application Part 2</p>
+        </div>
+        <form action="#" class="form-contact2" id="myform2">
+            <div class="pleasecontain">
+                <p id="pleasemain">Invalid Parameters,<br>please recheck your answers.</p>
+            </div>
+            
+            <p class="basic2">Questions</p>
+            <input id="18" type="text" placeholder="Do you work well with teams?" required>
+            <input id="19" type="text" placeholder="Would you consider yourself a leader?">
+            <input id="20" type="text" placeholder="Do you speak spanish?" required>
+            <input id="21" type="text" placeholder="If a customer got rude how would you react?" required>
+            <input id="22" type="text" placeholder="Would you consider yourself extroverted?" required>
+            <input id="23" type="text" placeholder="Do you have experience with office365?" required>
+
+            <input id="thissubmitt" type="submit" value="Continue">
+        <form>
+    </div>
+
+    <script>
+        var button = document.querySelector('.form-contact2 input[type="submit"]');
+
+        button.addEventListener('click', function(event) {
+
+            var pleasemain = document.getElementById("pleasemain");
+
+            var ask7 = document.getElementById("18");
+            var ask8 = document.getElementById("19");
+            var ask9 = document.getElementById("20");
+            var ask10 = document.getElementById("21");
+            var ask11 = document.getElementById("22");
+            var ask12 = document.getElementById("23");
+
+
+            if (
+                ask7.value.trim() === '' ||
+                ask8.value.trim() === '' ||
+                ask9.value.trim() === '' ||
+                ask10.value.trim() === '' ||
+                ask11.value.trim() === '' ||
+                ask12.value.trim() === ''
+            ) {
+
+                event.preventDefault();
+
+                pleasemain.style.display = 'flex'
+
+                window.scrollTo({
+                    top,
+                    behavior: 'smooth'
+                });
+
+            } else {
+
+                button.classList.add('clicked');
+                button.style.opacity = 0.5;
+                pleasemain.style.display = 'none';
+
+                setTimeout(function() {
+
+                    button.classList.remove('clicked');
+                    button.style.opacity = 1;
+
+                }, 4000);
+                
+            }
+        });
+    </script>
+
+</body>
+<footer class="footer">
+
+    <p class="bottom0">Fowler Museum 308 Charles E. Young Dr N, Los Angeles, CA 90024</p>
+    <p class="bottom1">Copyright © 2023 Fowler Museum. All Rights Reserved.</p>
+
+</footer>
+</html>

